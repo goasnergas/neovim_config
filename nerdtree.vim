@@ -25,3 +25,7 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 "jump to file pane
 autocmd VimEnter * wincmd l
 autocmd BufNew   * wincmd l
+
+"permet de fermer un buffer avec la touche c
+nnoremap c :bp\|bd #<CR>
+

@@ -13,7 +13,7 @@ set lazyredraw
 set magic
 
 " Show matching brackets when text indicator is over them
-set showmatch 
+set showmatch
 " How many tenths of a second to blink when matching brackets
 set mat=2
 
@@ -25,7 +25,7 @@ set tm=500
 
 
 " Enable syntax highlighting
-syntax enable 
+syntax enable
 set background=dark
 
 "encoding
@@ -88,3 +88,14 @@ map <F3> :set number!<CR>
 
 
 "TODO: bind Ctrl+PgDwn and Ctrl+PgUp to :tabn and :tabp
+
+"Enable ftplugin
+filetype plugin indent on
+
+
+:set guicursor=
+" Workaround some broken plugins which set guicursor indiscriminately.
+:autocmd OptionSet guicursor noautocmd set guicursor=
+
+
+:set tw=120
